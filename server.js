@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 var spotifyApi = new SpotifyWebApi({
   clientId: process.env.REACT_APP_SPOTIFY,
   clientSecret: process.env.REACT_APP_SPOTIFY_SECRET,
-  redirectUri: "http://localhost:3000/callback",
+  redirectUri: "https://musicjam-client.vercel.app/callback",
 });
 
 const app = express();
