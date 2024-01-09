@@ -16,10 +16,12 @@ const port = process.env.PORT || 8000;
 const ORIGIN = process.env.ORIGIN;
 let access_token;
 
-app.use(cors());
+
 const corsOptions = {
   origin: ORIGIN,
 };
+
+app.use(cors(corsOptions));
 
 const scopes = [
   "ugc-image-upload",
