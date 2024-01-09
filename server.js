@@ -274,6 +274,6 @@ app.get("/artist/:id", cors(corsOptions), async (req, res) => {
 
 app.listen(port, () =>
   console.log(
-    "HTTP Server up. Now go to http://localhost:8000/login in your browser."
+    "HTTP Server up. Now go to http://localhost:8888/login in your browser."
   )
 );
