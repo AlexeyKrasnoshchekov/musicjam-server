@@ -4,16 +4,18 @@ var SpotifyWebApi = require("spotify-web-api-node");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
+const ORIGIN = process.env.ORIGIN;
+
 var spotifyApi = new SpotifyWebApi({
   clientId: process.env.REACT_APP_SPOTIFY,
   clientSecret: process.env.REACT_APP_SPOTIFY_SECRET,
-  redirectUri: "https://musicjam-client.vercel.app/callback",
+  redirectUri: `${ORIGIN}/callback`,
 });
 
 const app = express();
 app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
-const ORIGIN = process.env.ORIGIN;
+
 let access_token;
 
 
